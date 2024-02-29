@@ -8,13 +8,11 @@ public:
 
     size_t low = 0;
     size_t high = nums.size();
-    size_t mid;
-    int value;
 
     while (low < high) {
 
-      mid = low + (high - low) / 2;
-      value = nums[mid];
+      size_t mid = low + (high - low) / 2;
+      const int& value = nums[mid];
 
       if (target == value) {
         return mid;
