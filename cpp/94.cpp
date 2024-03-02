@@ -32,25 +32,26 @@ public:
     return result;
   }
 
-  vector<int> iterativeInorderTraversal(TreeNode *root) {
+  vector<int> iterativeInorderTraversal(TreeNode* root) {
 
-    vector<TreeNode *> stack;
-    vector<int> result;
-    TreeNode *curr = root;
+        vector<TreeNode*> stack;
+        vector<int> result;
+        TreeNode* curr = root;
 
-    while (curr != nullptr || !stack.empty()) {
-      while (curr != nullptr) {
-        stack.push_back(curr);
-        curr = curr->left;
-      }
+        while (curr != nullptr || !stack.empty()) {
+            while (curr != nullptr) {
+                stack.push_back(curr);
+                curr = curr->left;
+            }
 
-      curr = stack.back();
-      stack.pop_back();
-      result.push_back(curr->val);
+            curr = stack.back();
+            stack.pop_back();
+            result.push_back(curr->val);
 
-      curr = curr->right;
+            curr = curr->right;
+        }
+
+        return result;
     }
 
-    return result;
-  }
 };

@@ -1,4 +1,5 @@
 #include <string>
+#include <algorithm>
 
 using std::string;
 using std::stringstream;
@@ -21,7 +22,7 @@ public:
     }
 
 
-    reverse(solution.begin(), solution.end());
+    std::reverse(solution.begin(), solution.end());
     return solution;
   }
 };

@@ -12,7 +12,7 @@ public:
     while (low < high) {
 
       size_t mid = low + (high - low) / 2;
-      const int& value = nums[mid];
+      const int &value = nums[mid];
 
       if (target == value) {
         return mid;
