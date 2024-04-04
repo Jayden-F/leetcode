@@ -18,6 +18,5 @@ bool canPermutePalindrome(const string &str) {
   // uneven amount of times. Meaning we check if the bit set is a power of 2.
   // If the length is even, there can't be any characters that appear an uneven
   // so we check if the bit set is 0.
-  return ((length & 1) && !(bit_set & bit_set - 1)) ||
-         (!(length & 1) && !bit_set);
+  return (length & 1) ? !(bit_set & bit_set - 1) : !bit_set;
 }
