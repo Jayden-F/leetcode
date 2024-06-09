@@ -1,0 +1,30 @@
+==97517== Memcheck, a memory error detector
+==97517== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==97517== Using Valgrind-3.22.0.GIT-lbmacos-99f1028bce-20230830 and LibVEX; rerun with -h for copyright info
+==97517== Command: ./a.out
+==97517== Parent PID: 51593
+==97517== 
+--97517-- 
+--97517-- Valgrind options:
+--97517--    --leak-check=full
+--97517--    --show-leak-kinds=all
+--97517--    --track-origins=yes
+--97517--    --verbose
+--97517--    --log-file=valgrind-out.txt
+--97517-- Output from sysctl({CTL_KERN,KERN_VERSION}):
+--97517--   Darwin Kernel Version 21.6.0: Mon Feb 19 20:24:34 PST 2024; root:xnu-8020.240.18.707.4~1/RELEASE_X86_64
+--97517-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--97517-- Page sizes: currently 4096, max supported 4096
+--97517-- Valgrind library directory: /usr/local/Cellar/valgrind/HEAD-99f1028/libexec/valgrind
+--97517-- ./a.out (rx at 0x100000000, rw at 0x100004000)
+--97517--    reading syms   from primary file (6 7)
+--97517--    dSYM= ./a.out.dSYM/Contents/Resources/DWARF/a.out
+--97517--    dSYM does not have correct UUID (out of date?)
+--97517-- run: /usr/bin/dsymutil "./a.out"
+--97517--    dsyms= ./a.out.dSYM/Contents/Resources/DWARF/a.out
+--97517-- /usr/lib/dyld (rx at 0x100010000, rw at 0x10007c000)
+--97517--    reading syms   from primary file (1 2318)
+--97517-- /usr/local/Cellar/valgrind/HEAD-99f1028/libexec/valgrind/memcheck-amd64-darwin (rx at 0x258000000, rw at 0x25821c000)
+--97517--    reading syms   from primary file (4541)
+--97517--    dSYM= /usr/local/Cellar/valgrind/HEAD-99f1028/libexec/valgrind/memcheck-amd64-darwin.dSYM/Contents/Resources/DWARF/memcheck-amd64-darwin
+--97517-- Scheduler: using generic scheduler lock implementation.
